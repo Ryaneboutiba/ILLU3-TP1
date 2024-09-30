@@ -12,7 +12,6 @@ public enum Type {
 	private String botte="";
 	
 	Type(String attaque, String parade, String botte) {
-		// TODO Auto-generated constructor stub
 		this.attaque=attaque;
 		this.parade=parade;
 		this.botte=botte;
