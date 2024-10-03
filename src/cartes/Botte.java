@@ -13,5 +13,12 @@ public class Botte extends Probleme {
 		return "Botte : "+getType().getBotte()+" .";
 	}
 
-	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Botte) {
+			Botte botte=(Botte)obj;
+			return getType().getBotte().equals(botte.getType().getBotte());
+		}
+		return false;
+	}
 }

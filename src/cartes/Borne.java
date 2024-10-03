@@ -17,4 +17,13 @@ public class Borne extends Carte {
 		// TODO Auto-generated method stub
 		return "Borne : "+getKm()+" KM.";
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Borne) {
+			Borne borne=(Borne)obj;
+			return km==borne.km;
+		}
+		return false;
+	}
 }

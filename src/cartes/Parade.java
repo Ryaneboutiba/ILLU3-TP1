@@ -13,6 +13,13 @@ public class Parade extends Bataille{
 		return "Parade : "+getType().getParade()+".";
 	}
 
-	
+	@Override
+	public boolean equals(Object obj) {
+		if(obj instanceof Parade) {
+			Parade parade=(Parade)obj;
+			return getType().getParade().equals(parade.getType().getParade());
+		}
+		return false;
+	}
 	
 }

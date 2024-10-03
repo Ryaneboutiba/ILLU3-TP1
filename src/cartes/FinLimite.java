@@ -7,4 +7,11 @@ public class FinLimite extends Limite {
 		// TODO Auto-generated method stub
 		return "FinLimite  "+" .";
 	}
+	
+	public boolean equals(Object obj) {
+		if(obj instanceof FinLimite) {
+			return true;
+		}
+		return false;
+	}
 }
