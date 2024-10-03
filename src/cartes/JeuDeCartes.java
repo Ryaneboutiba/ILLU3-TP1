@@ -30,6 +30,23 @@ public class JeuDeCartes {
 		return affichage.toString();
 	}
 	
+	public Carte[] donnerCartes() {
+        int totalCartes = 0;
+        for (Configuration config : typesDeCartes) {
+            totalCartes += config.getNbExemplaire();
+        }
+
+        Carte[] toutesLesCartes = new Carte[totalCartes];
+        int index = 0;
+
+        for (Configuration config : typesDeCartes) {
+            for (int j = 0; j < config.getNbExemplaire(); j++) {
+                toutesLesCartes[index++] = config.getCarte();
+            }
+        }
+
+        return toutesLesCartes;
+	}
 	
 	private static class Configuration{
 		private int nbExemplaire;
