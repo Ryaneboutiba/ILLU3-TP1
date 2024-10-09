@@ -30,6 +30,26 @@ public class JeuDeCartes {
 		return affichage.toString();
 	}
 	
+	public boolean checkCount(Carte carte[]) {
+		boolean condition=false;
+		for(int i=0;i<typesDeCartes.length;i++) {
+			int nbexemplaire=0;
+			if(typesDeCartes[i].getCarte().equals(carte[i])) {
+				for(int j=0;j<carte.length;j++) {
+					if(carte[j].equals(typesDeCartes[i].getCarte())) {
+						nbexemplaire++;
+					}
+				}
+				if(typesDeCartes[i].getNbExemplaire()==nbexemplaire) {
+					condition=true;
+				}else {
+					return false;
+				}
+			}
+		}
+		return condition;
+	}
+	
 	public Carte[] donnerCartes() {
         int totalCartes = 0;
         for (Configuration config : typesDeCartes) {
@@ -44,7 +64,7 @@ public class JeuDeCartes {
                 toutesLesCartes[index++] = config.getCarte();
             }
         }
-
+        
         return toutesLesCartes;
 	}
 	

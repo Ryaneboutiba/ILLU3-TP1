@@ -49,6 +49,7 @@ public class Sabot implements Iterable<Carte> {
 		private int nbOperationReference=nbOperation;
 		
 		public boolean hasNext() {
+			verifierConcurrence();
 			return indiceIterator<nbCartes;
 		}
 		
