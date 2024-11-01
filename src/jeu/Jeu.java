@@ -16,7 +16,7 @@ public class Jeu {
 			listeCartesNonMelanger.add(i, carte[i]);
 		}
 		List<Carte> listeCartes=GestionCartes.melanger(listeCartesNonMelanger);
-		this.sabot=new Sabot(listeCartes.toArray(Carte[]));
+		
 		
 	}
 }
